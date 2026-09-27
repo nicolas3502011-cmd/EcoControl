@@ -12,9 +12,8 @@ import {
 
 import "./index.css";
 
-const API = "http://localhost:3001";
-
-function App() {
+const API ="https://ecocontrol-backend.onrender.com";
+  function App() {
   const [equipamentos, setEquipamentos] = useState([]);
   const [papel, setPapel] = useState([]);
   const [residuos, setResiduos] = useState([]);
@@ -59,19 +58,19 @@ function App() {
   async function carregarDados() {
     try {
       const respostaEquipamentos = await fetch(
-        "http://localhost:3001/equipamentos"
+       `${API}/equipamentos`
       );
 
       const respostaPapel = await fetch(
-        "http://localhost:3001/papel"
+       `${API}/papel`
       );
 
       const respostaResiduos = await fetch(
-        "http://localhost:3001/residuos"
+        `${API}/residuos`
       );
 
       const respostaAgua = await fetch(
-        "http://localhost:3001/agua"
+        `${API}/agua`
       );
 
       const dadosEquipamentos =
@@ -163,7 +162,7 @@ function App() {
 
     try {
       const resposta = await fetch(
-        "http://localhost:3001/equipamentos",
+        `${API}/equipamentos`,
         {
           method: "POST",
           headers: {
@@ -253,7 +252,7 @@ function App() {
 
     try {
       const resposta = await fetch(
-        `http://localhost:3001/equipamentos/${equipamentoEditando.id}`,
+      `${API}/equipamentos/${equipamentoEditando.id}`,
         {
           method: "PUT",
           headers: {
@@ -318,7 +317,7 @@ function App() {
 
     try {
       const resposta = await fetch(
-        `http://localhost:3001/equipamentos/${id}`,
+       `${API}/equipamentos/${id}`,
         {
           method: "DELETE",
         }
@@ -364,7 +363,7 @@ function App() {
 
     try {
       const resposta = await fetch(
-        "http://localhost:3001/papel",
+       `${API}/papel`,
         {
           method: "POST",
           headers: {
@@ -421,7 +420,7 @@ function App() {
 
     try {
       const resposta = await fetch(
-        "http://localhost:3001/residuos",
+        `${API}/residuos`,
         {
           method: "POST",
           headers: {
@@ -478,7 +477,7 @@ function App() {
 
     try {
       const resposta = await fetch(
-        "http://localhost:3001/agua",
+        `${API}/agua`,
         {
           method: "POST",
           headers: {
