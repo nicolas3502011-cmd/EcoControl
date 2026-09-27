@@ -1,0 +1,689 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+   ========================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f6f4;
+  color: #1f2937;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* =========================================
+   CABEÇALHO
+   ========================================= */
+
+.topo {
+  background: linear-gradient(135deg, #111827, #1f2937, #166534);
+  color: white;
+  padding: 38px 45px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.topo h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.topo h2 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.topo p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   CONTAINER PRINCIPAL
+   ========================================= */
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+
+/* =========================================
+   DASHBOARD
+   ========================================= */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 18px;
+  padding: 23px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.11);
+}
+
+.icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  font-size: 29px;
+  background: #f0fdf4;
+}
+
+.card:nth-child(1) .icone {
+  background: #fff7ed;
+}
+
+.card:nth-child(2) .icone {
+  background: #eff6ff;
+}
+
+.card:nth-child(3) .icone {
+  background: #f0fdf4;
+}
+
+.card:nth-child(4) .icone {
+  background: #faf5ff;
+}
+
+.card p {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.card h2 {
+  font-size: 23px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   MENSAGEM
+   ========================================= */
+
+.mensagem-global {
+  background: #ecfdf5;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  padding: 15px 18px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   FORMULÁRIOS
+   ========================================= */
+
+.formularios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 25px;
+}
+
+
+/* =========================================
+   PAINÉIS
+   ========================================= */
+
+.painel {
+  background: white;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e5e7eb;
+}
+
+.painel h2 {
+  font-size: 21px;
+  margin-bottom: 22px;
+  font-weight: 800;
+}
+
+
+/* =========================================
+   FORMULÁRIO
+   ========================================= */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 7px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 9px;
+  margin-bottom: 16px;
+  font-size: 15px;
+  background: white;
+  color: #1f2937;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.12);
+}
+
+
+/* =========================================
+   BOTÕES
+   ========================================= */
+
+button {
+  border: none;
+  border-radius: 9px;
+  padding: 13px 16px;
+  background: linear-gradient(135deg, #166534, #22c55e);
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 3px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 16px rgba(22, 101, 52, 0.22);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   TABELA
+   ========================================= */
+
+.tabela-painel {
+  margin-top: 10px;
+}
+
+.tabela-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+th,
+td {
+  padding: 14px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+  background: #f8fafc;
+  color: #6b7280;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+td {
+  font-size: 14px;
+}
+
+tbody tr:hover {
+  background: #f9fafb;
+}
+
+
+/* =========================================
+   RELATÓRIO DE SUSTENTABILIDADE
+   ========================================= */
+
+.relatorio {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.relatorio .painel {
+  padding: 28px;
+}
+
+.relatorio .painel h2 {
+  font-size: 22px;
+  margin-bottom: 28px;
+}
+
+
+/* =========================================
+   CARDS DO RELATÓRIO
+   ========================================= */
+
+.relatorio-item {
+  margin-bottom: 28px;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.relatorio-item:last-child {
+  margin-bottom: 0;
+}
+
+.relatorio-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   NOME + PORCENTAGEM
+   ========================================= */
+
+.relatorio-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 14px;
+}
+
+.relatorio-topo span {
+  font-weight: 700;
+  font-size: 15px;
+  color: #374151;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.relatorio-topo strong {
+  font-size: 18px;
+  font-weight: 800;
+  white-space: nowrap;
+  min-width: 115px;
+  text-align: right;
+}
+
+
+/* =========================================
+   BARRAS DO RELATÓRIO
+   ========================================= */
+
+.barra {
+  width: 100%;
+  height: 15px;
+  background: #e5e7eb;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 11px;
+}
+
+.barra-preenchida {
+  height: 100%;
+  border-radius: 30px;
+  transition: width 0.7s ease;
+}
+
+
+/* Energia */
+
+.relatorio-item:nth-child(2) {
+  border-left: 6px solid #f59e0b;
+}
+
+.relatorio-item:nth-child(2) .relatorio-topo strong {
+  color: #d97706;
+}
+
+.energia {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+
+/* Papel */
+
+.relatorio-item:nth-child(3) {
+  border-left: 6px solid #3b82f6;
+}
+
+.relatorio-item:nth-child(3) .relatorio-topo strong {
+  color: #2563eb;
+}
+
+.papel {
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+}
+
+
+/* Reciclagem */
+
+.relatorio-item:nth-child(4) {
+  border-left: 6px solid #22c55e;
+}
+
+.relatorio-item:nth-child(4) .relatorio-topo strong {
+  color: #16a34a;
+}
+
+.reciclagem {
+  background: linear-gradient(90deg, #16a34a, #4ade80);
+}
+
+
+/* Texto auxiliar */
+
+.relatorio-item small {
+  display: block;
+  color: #6b7280;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   RECOMENDAÇÕES
+   ========================================= */
+
+.recomendacao {
+  padding: 18px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.recomendacao:last-child {
+  margin-bottom: 0;
+}
+
+.recomendacao:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.07);
+}
+
+.recomendacao strong {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.recomendacao p {
+  color: #6b7280;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* Cores das recomendações */
+
+.recomendacao:nth-child(2) {
+  border-left: 5px solid #f59e0b;
+}
+
+.recomendacao:nth-child(3) {
+  border-left: 5px solid #3b82f6;
+}
+
+.recomendacao:nth-child(4) {
+  border-left: 5px solid #22c55e;
+}
+
+.recomendacao:nth-child(5) {
+  border-left: 5px solid #8b5cf6;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .dashboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .formularios {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .relatorio {
+    grid-template-columns: 1fr;
+  }
+
+  .relatorio-topo {
+    gap: 25px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .topo {
+    padding: 28px 20px;
+  }
+
+  .topo h1 {
+    font-size: 25px;
+  }
+
+  .topo h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .topo p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 18px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .painel {
+    padding: 20px;
+  }
+
+  .relatorio .painel {
+    padding: 20px;
+  }
+
+  .relatorio-item {
+    padding: 16px;
+  }
+
+  .relatorio-topo {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .relatorio-topo strong {
+    min-width: auto;
+    text-align: left;
+  }
+}/* =========================================
+   ÁGUA
+   ========================================= */
+
+.agua-item {
+  border-left: 6px solid #06b6d4;
+}
+
+.agua-item .relatorio-topo strong {
+  color: #0891b2;
+}
+
+.agua {
+  background: linear-gradient(90deg, #0891b2, #67e8f9);
+}
+
+
+/* =========================================
+   RECOMENDAÇÃO DE ÁGUA
+   ========================================= */
+
+.agua-recomendacao {
+  border-left: 5px solid #06b6d4;
+}
+/* =========================================
+   GRÁFICO DE CONSUMO
+   ========================================= */
+
+.grafico-painel {
+  margin-top: 25px;
+}
+
+.grafico-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.grafico-cabecalho h2 {
+  margin-bottom: 8px;
+}
+
+.grafico-cabecalho p {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.grafico {
+  width: 100%;
+  height: 330px;
+  margin-top: 10px;
+}
+
+.grafico-legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.grafico-legenda span {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #f3f4f6;
+  color: #4b5563;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .grafico {
+    height: 280px;
+  }
+
+  .grafico-legenda {
+    flex-direction: column;
+  }
+}
+/* ================================
+   BOTÕES DA TABELA DE EQUIPAMENTOS
+   ================================ */
+
+.tabela-container td:last-child {
+  min-width: 180px;
+  text-align: center;
+}
+
+.tabela-container td:last-child button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  visibility: visible !important;
+  opacity: 1 !important;
+  width: auto !important;
+  min-width: 90px;
+  padding: 8px 12px;
+  margin: 3px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.tabela-container td:last-child button:first-child {
+  background: #f59e0b !important;
+  color: white !important;
+}
+
+.tabela-container td:last-child button:last-child {
+  background: #ef4444 !important;
+  color: white !important;
+}
+
+.tabela-container td:last-child button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9 !important;
+}
